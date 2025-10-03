@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Explorer - Discover Your Next Adventure</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+      <header>
+        <h1 class="logo">Travel Explorer</h1>
+        <p class="tagline">
+          Discover Your Next Adventure with Live Weather & Stunning Photography
+        </p>
+      </header>
+
+      <div class="search-container">
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for a destination... (e.g., Paris, Tokyo, New York)"
+          />
+          <button class="search-btn" onclick="searchDestination()">
+            Explore
+          </button>
+        </div>
+      </div>
+
+      <div class="popular-destinations">
+        <h2 class="section-title">Popular Destinations</h2>
+        <div class="destinations-grid">
+          <div class="destination-card" onclick="searchFor('Paris')">
+            <img
+              src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800"
+              alt="Paris"
+            />
+            <div class="card-content">
+              <h3 class="card-title">Paris, France</h3>
+              <p class="card-description">
+                The City of Light awaits with its iconic Eiffel Tower, charming
+                cafés, and world-class museums.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Romance</span>
+                <span class="tag">Culture</span>
+                <span class="tag">Art</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="destination-card" onclick="searchFor('Tokyo')">
+            <img
+              src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800"
+              alt="Tokyo"
+            />
+            <div class="card-content">
+              <h3 class="card-title">Tokyo, Japan</h3>
+              <p class="card-description">
+                A vibrant metropolis blending ancient traditions with
+                cutting-edge technology and cuisine.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Technology</span>
+                <span class="tag">Food</span>
+                <span class="tag">Culture</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="destination-card" onclick="searchFor('New York')">
+            <img
+              src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800"
+              alt="New York"
+            />
+            <div class="card-content">
+              <h3 class="card-title">New York, USA</h3>
+              <p class="card-description">
+                The city that never sleeps, offering endless entertainment,
+                dining, and iconic landmarks.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Urban</span>
+                <span class="tag">Shopping</span>
+                <span class="tag">Culture</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="destination-card" onclick="searchFor('Santorini')">
+            <img
+              src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800"
+              alt="Santorini"
+            />
+            <div class="card-content">
+              <h3 class="card-title">Santorini, Greece</h3>
+              <p class="card-description">
+                Stunning sunsets, white-washed buildings, and crystal-clear
+                Mediterranean waters.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Beach</span>
+                <span class="tag">Romance</span>
+                <span class="tag">Relaxation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="destination-card" onclick="searchFor('Jaipur')">
+            <img
+              src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800"
+              alt="Jaipur"
+            />
+            <div class="card-content">
+              <h3 class="card-title">Jaipur, India</h3>
+              <p class="card-description">
+                The Pink City showcases magnificent palaces, vibrant bazaars,
+                and rich Rajasthani heritage.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Heritage</span>
+                <span class="tag">Culture</span>
+                <span class="tag">Architecture</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="destination-card" onclick="searchFor('Dubai')">
+            <img
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800"
+              alt="Dubai"
+            />
+            <div class="card-content">
+              <h3 class="card-title">Dubai, UAE</h3>
+              <p class="card-description">
+                A futuristic oasis featuring towering skyscrapers, luxury
+                shopping, and desert adventures.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Luxury</span>
+                <span class="tag">Modern</span>
+                <span class="tag">Shopping</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="destination-card" onclick="searchFor('Bali')">
+            <img
+              src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800"
+              alt="Bali"
+            />
+            <div class="card-content">
+              <h3 class="card-title">Bali, Indonesia</h3>
+              <p class="card-description">
+                Tropical paradise with pristine beaches, ancient temples, and
+                lush rice terraces.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Beach</span>
+                <span class="tag">Nature</span>
+                <span class="tag">Spiritual</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="destination-card" onclick="searchFor('London')">
+            <img
+              src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800"
+              alt="London"
+            />
+            <div class="card-content">
+              <h3 class="card-title">London, UK</h3>
+              <p class="card-description">
+                Historic capital blending royal heritage with modern culture,
+                theater, and diverse cuisine.
+              </p>
+              <div class="card-tags">
+                <span class="tag">History</span>
+                <span class="tag">Culture</span>
+                <span class="tag">Arts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="resultsContainer"></div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Travel Explorer</h3>
+          <p>
+            Your gateway to discovering the world's most beautiful destinations.
+            Get live weather updates and stunning photography to plan your
+            perfect trip.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#blog">Travel Blog</a></li>
+            <li><a href="#guides">Travel Guides</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span>📧</span>
+              <span>info@travelexplorer.com</span>
+            </div>
+            <div class="contact-item">
+              <span>📞</span>
+              <span>+1 (555) 123-4567</span>
+            </div>
+            <div class="contact-item">
+              <span>📍</span>
+              <span>123 Travel Street, Adventure City</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <p>
+            Subscribe to get travel tips, destination updates, and exclusive
+            offers.
+          </p>
+          <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="Your email"
+              required
+            />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2024 Travel Explorer. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <a href="#cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="imageModal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Full size image" />
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
